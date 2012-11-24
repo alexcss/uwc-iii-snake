@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Калюжный Алесксей - UWC III - Игра "Дикая Змея"</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+<div class="container">
+	<h1>UWC III - Игра "Дикая Змея"</h1>
+	<hr>
+	<div id="welcome">
+		<div class="input-append">
+			<input id="name" type="text" placeholder="Введите Ваше имя" class="span3" data-placement="bottom" data-content="Введите Ваше имя" data-original-title="Внимание!"/>
+			<button id="start" class="btn btn-primary">СТАРТ</button>
+		</div>
+	</div>
+	<div id="game-area">
+		<div class="score"><b></b> Ваш счет: <i>0</i> </div>
+		<button id="restart" class="btn btn-primary btn-large">ЗАНОВО</button>
+		<div id="game-field-wrap">
+			<canvas id="game-field" width="700" height="400">Извините, но ваш браузер не поддерживаем HTML5</canvas>
+		</div>
+	</div>
+	<hr>
+	<footer>
+		<p>© автор <a href="http://lexx.pp.ua">Калюжный Алексей</a> 2012</p>
+	</footer>
+</div>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="js/snake.js"></script>
+</body>
+</html>
