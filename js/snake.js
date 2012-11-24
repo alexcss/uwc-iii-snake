@@ -70,16 +70,15 @@
 		};
 		// Show Game Over Message
 		var gameOverMsg = function () {
-			ctx.font = 'bold 30px sans-serif';
+			ctx.font = 'bold 30px Arial, sans-serif';
 			ctx.fillStyle = '#333';
 			ctx.textAlign = 'center';
 			ctx.textBaseline = 'middle';
-			ctx.strokeStyle = 'white';
 			ctx.lineWidth = 2;
 			var centreX = w / 2;
 			var centreY = h / 2;
 			ctx.fillText('Игра окончена', centreX, centreY - 10);		
-			ctx.font = 'bold 14px sans-serif';
+			ctx.font = 'bold 14px Arial, sans-serif';
 	    	ctx.fillText('Нажмите кнопку "ЗАНОВО" для новой игры', centreX, centreY + 15);			
 		}
 		// Draw game process
@@ -126,9 +125,9 @@
 			snakeArr.unshift(tail); 
 			for (var i = 0; i < snakeArr.length; i++) {
 				var c = snakeArr[i];
-				drawCell(c.x, c.y, "blue");
+				drawCell(c.x, c.y, "#333");
 			}
-			drawCell(food.x, food.y, "red");
+			drawCell(food.x, food.y, "green");
 
 			$(document).keydown(function (evt) {
 				changeDirection(evt.keyCode);
@@ -145,7 +144,7 @@
 			drawGame();
 			if (gameOver) {
 				$('#restart').fadeToggle(200);
-				$('.score-list ul').append('<li>'+score+'</li>');
+				$('.score-list ol').append('<li>Очков: <b>'+score+'</b></li>');
 				$('.score-list').fadeIn(200);
 				
 				clearInterval(timeout);
@@ -162,8 +161,7 @@
 			$('#welcome').slideToggle(200);
 				$('#game-area').fadeToggle(500, function () {
 					snake();
-				})
-			
+				})			
 		} else {
 			$('#name').popover('show')
 		}
