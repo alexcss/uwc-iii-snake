@@ -138,7 +138,6 @@
 		var initGame = function () {
 			setSnake();
 			setFood();
-			//drawGame();
 			gameLoop();
 		}
 
@@ -146,6 +145,9 @@
 			drawGame();
 			if (gameOver) {
 				$('#restart').fadeToggle(200);
+				$('.score-list ul').append('<li>'+score+'</li>');
+				$('.score-list').fadeIn(200);
+				
 				clearInterval(timeout);
 				gameOverMsg();
 			} else timeout = setTimeout(gameLoop, speed);
@@ -168,6 +170,7 @@
 	}
 	var restartGame = function () {		
 		$('#restart').fadeOut(200);
+		$('.score-list').fadeOut(200);
 		$('.score i').text(0);
 		snake();
 	}

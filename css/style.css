@@ -21,9 +21,29 @@ body {
 	font-size:14px;
 }
 #game-area {
+	position:relative;
 	display:none;
 	margin:20px auto;
 	width:700px;
+}
+.score-list {
+	display:none;
+	background:#fefefe;
+	text-align:left;
+	font-weight:bold;
+	position:absolute;
+	height:50%;
+	overflow:auto;
+	width:20%;
+	right:10px;
+	bottom:10px;
+	padding:10px;
+	border:1px solid #CCC;
+	box-shadow:0 0 10px rgba(0,0,0,.4);
+	-moz-box-shadow:0 0 10px rgba(0,0,0,.4);
+	-webkit-box-shadow:0 0 10px rgba(0,0,0,.4);
+	-o-box-shadow:0 0 10px rgba(0,0,0,.4);
+	-ms-box-shadow:0 0 10px rgba(0,0,0,.4);
 }
 canvas {
 	display:block;
@@ -31,6 +51,10 @@ canvas {
 #game-field-wrap {
 	border:1px solid #CCC;
 	box-shadow:0 0 10px rgba(0,0,0,.4);
+	-moz-box-shadow:0 0 10px rgba(0,0,0,.4);
+	-webkit-box-shadow:0 0 10px rgba(0,0,0,.4);
+	-o-box-shadow:0 0 10px rgba(0,0,0,.4);
+	-ms-box-shadow:0 0 10px rgba(0,0,0,.4);
 }
 #restart {
 	display:none;
